@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <div>
+            <h1 class="page-label">
+                One-time Loan Payment
+            </h1>
+            <p class="page-sub-label">
+                Fill out the form below to complete your payment.
+            </p>
+        </div>
+        <div class="grid-container">
+            <div class="account-number">
+                <p class="header-label" id="account_number_label">Loan Account Number</p>
+                <input id="account_number" type="number" class="text-input" required/>
+                <p id="account_number_loan_error_msg" class="error-msg">
+                    Loan Account Number is required
+                </p> 
+            </div>
+            <div class="info-picture">
+                <div class="bank-info">
+                    <p class="help-picture-label">
+                        Where can I find the routing and account number?
+                    </p>
+                </div>
+                <div class="card-info">
+                    <p class="help-picture-label">
+                        Where can I find the CVV number?
+                    </p>
+                </div>
+                <div class="bank-info">
+                    <img src="../design-files/check.png" class="help-picture"/>
+                </div>
+                <div class="card-info">
+                    <img src="../design-files/cvv.png" class="help-picture"/>
+                </div>
+            </div>
+            <div class="type">
+                <p class="header-label" id="type-account-label">Type of Account:</p>
+                <input type="radio" name="type-account" value="checking" id="checking_radio" onchange="handleTypeChange(this);"/>
+                <label for="checking_radio" class="radio-label">Checking</label>
+                <input type="radio" name="type-account" value="debit" id="debit_radio" onchange="handleTypeChange(this);"/>
+                <label for="debit_radio" class="radio-label">Debit Card</label>
+                <p id="type-account_error_msg" class="error-msg">
+                    Type of Account is required
+                </p> 
+            </div>
+            <div class="routing">
+                <div class="bank-info">
+                    <p class="header-label" id="routing_number_label">Routing Number</p>
+                    <input type="number" class="text-input" maxlength="9" id="routing_number"/>
+                    <p id="routing_number_error_msg" class="error-msg">
+                        Routing Number is required
+                    </p>  
+                </div>
+                <div class="card-info">
+                    <p class="header-label" id="card_number_label">Card Number</p>
+                    <input type="number" class="text-input" id="card_number"/> 
+                    <p id="card_number_error_msg" class="error-msg">
+                        Card Number is required
+                    </p>
+                </div>
+            </div>
+            <div class="banking">
+                <div class="bank-info">
+                    <p class="header-label" id="bank_number_label">Bank Account Number</p>
+                    <input type="number" class="text-input" id="bank_number"/>
+                    <p id="bank_number_error_msg" class="error-msg">
+                        Bank Account Number is required
+                    </p>   
+                </div>
+                <div class="card-info">
+                    <p class="header-label" id="name_card_label">Name On Card</p>
+                    <input type="text" class="text-input" id="name_card"/> 
+                    <p id="name_card_error_msg" class="error-msg">
+                        Name on card is required
+                    </p>   
+                </div>
+            </div>
+            <div class="confirm-bank">
+               <div class="bank-info">
+                    <p class="header-label" id="bank_number_confirm_label">Confirm Bank Account Number</p>
+                    <input type="number" class="text-input" id="bank_number_confirm"/> 
+                    <p id="bank_number_confirm_error_msg" class="error-msg">
+                        Bank Account Number confirmation is required
+                    </p>   
+               </div>
+               <div class="card-info">
+                <div class="credit-card-grid-container">
+                    <div style="border-right: 1px solid black;">
+                        <p class="header-label" id="expiry_date_label">Expiration Date</p>
+                        <input type="month" style="border:0" id="expiry_date" /> 
+                        <p id="expiry_date_error_msg" class="error-msg">
+                            Expiration Date required
+                        </p>   
+                    </div>
+                    <div>
+                        <p class="header-label" id="cvv_card_label">CVV</p>
+                        <input type="number" style="border: 0" max="999" min="100" id="cvv_card"/> 
+                        <p id="cvv_card_error_msg" class="error-msg">
+                            CVV required
+                        </p>  
+                    </div>
+                </div>
+               </div>
+            </div>
+        </div>
+        <div>
+            <button class="payment-button" type="button" onclick="submit()">
+                Make Payment
+            </button>
+        </div>
+        <script src="index.js"></script>
+    </body>
+</html>

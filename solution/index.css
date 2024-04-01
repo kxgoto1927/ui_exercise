@@ -1,0 +1,136 @@
+.outer-container{
+    margin:auto; 
+    width: 50%;
+}
+
+.bank-info{
+    display: block;
+}
+
+.card-info{
+    display: none;
+}
+
+
+
+.payment-button{
+    background-color:teal;
+    color: white;
+    width: 25%;
+    border: 0;
+    margin-top: 2%;
+    padding: 20px;
+    font-weight: bold;
+}
+
+.error-msg {
+    font-size: 12px;
+    display: none;
+    color: red;
+    background-color: lightpink;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding: 1%;
+}
+
+.header-label {
+    font-size: 12px;
+    font-weight: bold;
+    color: grey;
+    margin-bottom: 0;
+    margin-left: 1%;
+}
+
+.text-input {
+    border: 0; 
+    width: 80%;
+}
+.help-picture-label{
+    font-weight: 500;
+    font-size: 14px;
+    text-align:center;
+}
+.help-picture{
+    display:block;
+    margin: auto;
+}
+.radio-label {
+    font-size: 14px;
+}
+
+.page-label {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 0px;
+}
+
+.page-sub-label {
+    font-size: 16px;
+}
+
+.account-number { grid-area: account-number; }
+.type { grid-area: type; }
+.routing { grid-area: routing; }
+.banking { grid-area: banking; }
+.confirm-bank { grid-area: confirm-bank; }
+.info-picture { grid-area: info-picture; }
+
+body {
+    width:60%;
+    margin: auto;
+    font-family: Roboto;
+}
+
+.credit-card-grid-container{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.credit-card-grid-container > div {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    font-size: 30px;
+    text-align:left;
+}
+@media screen and (min-width: 900px) {
+    .grid-container {
+        display: grid;
+        grid-template-areas:
+            'account-number account-number account-number account-number account-number account-number'
+            'type type type info-picture info-picture info-picture'
+            'routing routing routing info-picture info-picture info-picture'
+            'banking banking banking info-picture info-picture info-picture'
+            'confirm-bank confirm-bank confirm-bank info-picture info-picture info-picture';
+    }
+}
+@media screen and (max-width: 900px) {
+    .grid-container {
+        display: grid;
+        grid-template-areas:
+            'account-number account-number account-number account-number account-number account-number'
+            'type type type type type type'
+            'routing routing routing routing routing routing'
+            'banking banking banking banking banking banking'
+            'confirm-bank confirm-bank confirm-bank confirm-bank confirm-bank confirm-bank'
+            'info-picture info-picture info-picture info-picture info-picture info-picture';
+    }
+    .payment-button{
+        background-color:teal;
+        color: white;
+        width: 100%;
+        border: 0;
+        margin-top: 2%;
+        padding: 20px;
+        font-weight: bold;
+    }
+}
+
+
+
+.grid-container > div {
+    border: 1px solid black;
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    font-size: 30px;
+    text-align:left;
+}
